@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * time_tables - main function
+ * times_table - times table function
  *
  */
 
