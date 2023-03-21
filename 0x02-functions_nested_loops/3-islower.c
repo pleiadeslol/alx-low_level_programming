@@ -3,10 +3,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
- * _islower(int c) - checks for lowercase character
+/**
+ * _islower - main function
  *
- * Return: 1 if c is lowercase, 0 otherwise
+ * @c: character to compare
+ *
+ * Return: 1 if true, 0 if false
+ *
  */
 
 int _islower(int c)
