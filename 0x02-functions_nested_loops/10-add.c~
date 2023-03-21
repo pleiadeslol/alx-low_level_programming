@@ -1,0 +1,15 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * add - addition function
+ *
+ * @a, @b: integers additioned
+ *
+ * Return: sum of a and b
+ */
+
+int add(int a, int b)
+{
+	return (a + b);
+}
