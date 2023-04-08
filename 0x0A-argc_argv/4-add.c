@@ -2,27 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define UNUSED(x) (void)(x)
-
-/**
- * StringCheck - checks string
- * @s: string to check
- * Return: boolean
- */
-
-int StringCheck(char *s)
-{
-	int i = 0;
-
-	for (; s[i] != '\0'; i++)
-	{
-		if (!isdigit(s[i]))
-		{
-			return (0);
-		}
-	}
-	return (1);
-}
 
 /**
  * main - main function
@@ -41,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (StringCheck(argv[i]))
+			if (isdigit(*argv[i]))
 			{
 				sum += atoi(argv[i]);
 			}
