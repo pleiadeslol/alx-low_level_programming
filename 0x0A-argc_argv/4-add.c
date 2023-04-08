@@ -33,30 +33,21 @@ int stringcheck(char *s)
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int sum = 0;
+	int num, result = 0, i;
 
-	if (argc > 1)
+	while (argc-- > 1)
 	{
-		for (i = 1; i < argc; i++)
+		for (i = 0; argv[argc][i]; i++)
 		{
-			if (stringcheck(argv[i]))
-			{
-				sum += atoi(argv[i]);
-			}
-			else
+			if (!(isdigit(argv[argc][i])))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
-		return (0);
+		num = atoi(argv[argc]);
+		result += num;
 	}
-	else
-	{
-		printf("%d\n", 0);
-		return (1);
-	}
-
+	printf("%d\n", result);
+	return (0);
 }
