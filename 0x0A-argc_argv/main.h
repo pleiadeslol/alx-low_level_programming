@@ -391,6 +391,6 @@ void swap_int(int *a, int *b);
  */
 int _strlen(char *s);
 
-int StringCheck(char *s);
+int stringcheck(char *s);
 
 #endif

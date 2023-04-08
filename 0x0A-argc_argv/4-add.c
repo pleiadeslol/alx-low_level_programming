@@ -4,6 +4,26 @@
 #include <ctype.h>
 
 /**
+ * stringcheck - checks string
+ * @s: string to check
+ * Return: boolean
+ */
+
+int stringcheck(char *s)
+{
+	int i = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (!isdigit(s[i]))
+		{
+			return (0);
+		}
+	}
+	return (1);
+}
+
+/**
  * main - main function
  *
  * @argc: argumentc
@@ -20,7 +40,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(*argv[i]) != 0)
+			if (stringcheck(argv[i]))
 			{
 				sum += atoi(argv[i]);
 			}
