@@ -17,4 +17,6 @@ char *argstostr(int ac, char **av);
 
 char **strtow(char *str);
 
+char **helper(int word, int len, char *str, char **s);
+
 #endif
