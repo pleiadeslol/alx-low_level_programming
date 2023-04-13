@@ -1,0 +1,36 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * string_nconcat - function that concetanates two strings
+ *
+ * @s1: first string
+ * @s2: second string
+ * @n: size to be concetanated
+ *
+ * Return: pointer to a new allocated space in memo containing
+ * s1 followed by the first n bytes of s2, or NULL if func fail
+ */
+
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	unsigned int i = 0, j = 0;
+	int *p;
+	
+	while (s1[i] != '\0')
+	{
+		i++;
+	}
+
+	while (j < n && s2[j] != '\0')
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+
+	p = malloc(s1);
+
+	return(p);
+}
